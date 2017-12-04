@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">DrawerViewEx</string>
+
+    <!--TODO 9 ! -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string-array name="titles">
+        <item>Receive your Seat</item>
+        <item>Receive your Seat</item>
+        <item>Receive your Seat</item>
+        <item>Receive your Seat</item>
+        <item>Receive your Seat</item>
+        <item>Receive your Seat</item>
+        <item>Receive your Seat</item>
+    </string-array>
+    <string-array name="company">
+        <item>Udacity</item>
+        <item>Udacity</item>
+        <item>Udacity</item>
+        <item>Udacity</item>
+        <item>Udacity</item>
+        <item>Udacity</item>
+        <item>Udacity</item>
+    </string-array>
+    <string-array name="firstline">
+        <item>Launch Your First Android app with our TOP course at 82% OFF (24 hrs ONLY) HERE </item>
+        <item>Launch Your First Android app with our TOP course at 82% OFF (24 hrs ONLY) HERE </item>
+        <item>Launch Your First Android app with our TOP course at 82% OFF (24 hrs ONLY) HERE  </item>
+        <item>Launch Your First Android app with our TOP course at 82% OFF (24 hrs ONLY) HERE </item>
+        <item>Launch Your First Android app with our TOP course at 82% OFF (24 hrs ONLY) HERE </item>
+        <item>Launch Your First Android app with our TOP course at 82% OFF (24 hrs ONLY) HERE </item>
+        <item>Launch Your First Android app with our TOP course at 82% OFF (24 hrs ONLY) HERE </item>
+    </string-array>
+    <string-array name="date">
+        <item> 30 dec </item>
+        <item> 30 dec </item>
+        <item> 30 dec </item>
+        <item> 30 dec </item>
+        <item> 30 dec </item>
+        <item> 30 dec </item>
+        <item> 30 dec </item>
+    </string-array>
+</resources>
