@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context="app.sunshine.com.example.android.drawerviewex.MainActivity">
+    tools:context="app.sunshine.com.example.android.drawerviewex.HomeActivity">
 
     <ListView
         android:layout_width="match_parent"
@@ -22,6 +22,7 @@
     <android.support.design.widget.NavigationView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
+        android:id="@+id/navDrawer"
         android:background="@color/white"
         app:itemIconTint="@color/dark_grey"
         app:itemTextColor="@color/dark_grey"

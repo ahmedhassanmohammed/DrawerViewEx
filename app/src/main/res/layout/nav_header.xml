@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="10dp"
         android:textStyle="bold"
+        android:id="@+id/username"
         android:text="Ahmed Hassan"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
 
