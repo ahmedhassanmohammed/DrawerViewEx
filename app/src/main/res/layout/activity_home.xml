@@ -12,10 +12,13 @@
     android:id="@+id/drawer_layout"
     tools:context="app.sunshine.com.example.android.drawerviewex.HomeActivity">
 
-    <ListView
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/EmailsListView"></ListView>
+        android:id="@+id/frame_layout_home"
+        android:background="@color/white_greyish"
+        />
 
 
     <!-- TODO 3 : make NavigationView !-->

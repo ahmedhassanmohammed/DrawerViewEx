@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.sunshine.com.example.android.drawerviewex.InboxActivity">
+    tools:context="app.sunshine.com.example.android.drawerviewex.InboxFragment">
+
+    <ListView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/EmailsListView"></ListView>
 
 </android.support.constraint.ConstraintLayout>

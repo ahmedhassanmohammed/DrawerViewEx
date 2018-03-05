@@ -8,19 +8,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
-import android.widget.ListView;
-import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
     // TODO 8 : 4wt el code da elly ana m4 fahmo XD
     private DrawerLayout myDrawerlayout;
     private ActionBarDrawerToggle myToggle;
 
-    ListView listView;
-    MessageAdapter adapter;
-    NavigationView navigationView;
-    TextView UserName;
 
+    NavigationView navigationView;
 
 
     @Override
@@ -33,42 +28,47 @@ public class HomeActivity extends AppCompatActivity {
         myToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        listView = (ListView) findViewById(R.id.EmailsListView);
-        adapter=new MessageAdapter(getApplicationContext());
-        listView.setAdapter(adapter);
+        InboxFragment inbox = new InboxFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_home, inbox, "").commit();
+
+
+
         navigationView = (NavigationView) findViewById(R.id.navDrawer);
-
-
-
-
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-               String title= item.getTitle().toString();
-
-                Intent intent ;
+                String title = item.getTitle().toString();
 
                 switch (title) {
                     case "Inbox":
-                        startActivity(new Intent(HomeActivity.this, InboxActivity.class));
+                        InboxFragment inboxFragment = new InboxFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_home, inboxFragment, "").commit();
+                        myDrawerlayout.closeDrawers();
                         break;
                     case "Sent":
-                        startActivity(new Intent(HomeActivity.this, SentActivity.class));
-
+                        SentFragment sentFragment = new SentFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_home, sentFragment, "").commit();
+                        myDrawerlayout.closeDrawers();
                         break;
                     case "Favorites":
-                        startActivity(new Intent(HomeActivity.this, FavoritesActivity.class));
+                        Favorites_fragment favorites_fragment = new Favorites_fragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_home, favorites_fragment, "").commit();
+                        myDrawerlayout.closeDrawers();
                         break;
                     case "Trash":
-                        startActivity(new Intent(HomeActivity.this, TrashActivity.class));
+                        TrashFragment trashFragment = new TrashFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_home, trashFragment, "").commit();
+                        myDrawerlayout.closeDrawers();
                         break;
                     case "Logout":
                         // intent to login activity
                         break;
                     case "Profile":
-                        startActivity(new Intent(HomeActivity.this, ProfileActivity.class));
+                        ProfileFragment profileFragment = new ProfileFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.frame_layout_home, profileFragment, "").commit();
+                        myDrawerlayout.closeDrawers();
                         break;
-                    case "Setting":
+                    case "Settings":
                         startActivity(new Intent(HomeActivity.this, SettingsActivity.class));
                         break;
                     default:
